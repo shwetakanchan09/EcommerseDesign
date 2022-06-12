@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.LevelActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_50"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:popupTheme="@style/AppTheme.PopupOverlay">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/back_btn"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center|left"
+                        android:src="@drawable/ic_back" />
+
+                    <TextView
+                        android:id="@+id/app_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="-25dp"
+                        android:gravity="center"
+                        android:text="Membership"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                </FrameLayout>
+            </androidx.appcompat.widget.Toolbar>
+        </RelativeLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/app_bar_layout"
+        android:layout_marginBottom="20dp"
+        android:fitsSystemWindows="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <HorizontalScrollView
+                android:id="@+id/ll_All_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/app_bar_layout"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:fillViewport="true"
+                android:measureAllChildren="false"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/margin_10">
+
+                    <LinearLayout
+                        android:id="@+id/ll_Silver_level"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/subscription1"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginStart="5dp"
+                            android:background="@drawable/silver_level"
+                            android:gravity="center"
+                            android:text="Silver\n Membership"
+                            android:textColor="@color/black_color"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_Gold_level"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/subscription2"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_toRightOf="@id/subscription1"
+                            android:background="@drawable/gold_level"
+                            android:gravity="center"
+                            android:text="Gold\nMembership "
+                            android:textColor="@color/black_feint_1"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_Platinum_level"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/subscription3"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_toRightOf="@id/subscription2"
+                            android:background="@drawable/platinam_level"
+                            android:gravity="center"
+                            android:text="Platinum\nMembership"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_level_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <include
+                    android:id="@+id/silver_detail"
+                    layout="@layout/item_silver" />
+
+                <include
+                    android:id="@+id/gold_detail"
+                    layout="@layout/item_gold"
+                    android:visibility="gone" />
+
+                <include
+                    android:id="@+id/platinum_detail"
+                    layout="@layout/item_platinum"
+                    android:visibility="gone" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/txtfollow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cl_level_detail"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="20dp"
+                app:cardElevation="10dp">
+
+                <LinearLayout
+                    android:id="@+id/ll_Earning"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:id="@+id/ll_points"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="0"
+                            android:textColor="@color/black_color"
+                            android:textSize="34sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5sp"
+                            android:gravity="center"
+                            android:text="My Reyound link\nEarnings"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Know More"
+                            android:textColor="@color/blue_50"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="#c6cfd1" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_Circle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="0"
+                            android:textColor="@color/black_color"
+                            android:textSize="34sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5sp"
+                            android:gravity="center"
+                            android:text="My Reyound friend\ncircle Earnings"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Know More"
+                            android:textColor="@color/blue_50"
+                            android:textSize="16sp" />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtfollow"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Reyound is a E-commerce website for all lifestyle products .We provide shoppers all over India with good expansion on its portal it brings latest affordable products as per your choice at the lowest price.\n\nThis is your link. Start Sharing"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10sp"
+                    android:text="YOUR REFFERAL CODE"
+                    android:textColor="@color/black_feint_1"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20sp"
+                    android:text="SHWETA0089"
+                    android:textColor="@color/black"
+                    android:textSize="28sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20sp"
+                    android:text="https://reyound.com/referralcode/shweta"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@color/black"
+                    android:text="SHARE YOUR LINK"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

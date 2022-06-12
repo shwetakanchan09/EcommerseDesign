@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/padding_10"
+    tools:context=".activity.GiftCertificateActivity">
+
+    <include
+        layout="@layout/item_gift_certificate"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:text="Please enter recipients Name"/>
+
+
+    <EditText
+        android:id="@+id/Location"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="5dp"
+        android:background="@drawable/border"
+        android:inputType="textEmailAddress"
+        android:maxLines="1"
+        android:text="Recipients Name"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:textSize="15sp" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:text="Please enter Email Address"/>
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="5dp"
+        android:background="@drawable/border"
+        android:inputType="textEmailAddress"
+        android:maxLines="1"
+        android:text="Recipients Email Address"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:textSize="15sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:text="Please enter your Name"/>
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="5dp"
+        android:background="@drawable/border"
+        android:inputType="textEmailAddress"
+        android:maxLines="1"
+        android:text="Gift From"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:textSize="15sp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:text="Select Amount"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_gift"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_10" />
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:text="GIFT NOW"
+        android:background="@color/blue_50"
+        android:layout_marginTop="20dp"/>
+
+</LinearLayout>

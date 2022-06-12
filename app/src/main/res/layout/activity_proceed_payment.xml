@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.ProceedPayment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:popupTheme="@style/AppTheme.PopupOverlay">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/back_btn"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center|left"
+                        android:src="@drawable/ic_back_black" />
+
+                    <TextView
+                        android:id="@+id/app_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="50dp"
+                        android:gravity="center"
+                        android:text="Payment Methods"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                </FrameLayout>
+            </androidx.appcompat.widget.Toolbar>
+        </RelativeLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Shweta Gadhave"
+                android:textColor="@color/black"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/txt_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="(Default Address)"
+                        android:layout_marginTop="10dp"
+                        android:textSize="11dp" />
+
+                    <ImageButton
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="20dp"
+                        android:background="#0000"
+                        android:layout_marginLeft="100dp"
+                        android:src="@drawable/ic_edit" />
+
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:padding="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="A/404 Hirkani \nBhavani Shankar rd,\nDadar West 400028"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_AllAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:background="@drawable/size_back"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radioButton2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Shweta Gadhave"
+                    android:layout_marginTop="10dp"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:text="A/404 Sonali \nGate No. 2,\nKalwa West 400605"/>
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:padding="5dp"
+                android:background="#E5E5E5" />
+        <LinearLayout
+            android:id="@+id/ll_Address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtAllAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select from Saved Address"
+                android:textSize="18sp"
+                android:drawableEnd="@drawable/ic_forward_arrow"
+                android:padding="@dimen/margin_5"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:padding="5dp"
+                android:background="#E5E5E5" />
+
+        <LinearLayout
+            android:id="@+id/ll_New_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtNewAdd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add New Address"
+            android:textSize="18sp"
+            android:drawableEnd="@drawable/ic_forward_arrow"
+            android:padding="@dimen/margin_5"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold" />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:padding="5dp"
+            android:background="#E5E5E5" />
+
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Order Summary"
+                android:layout_marginTop="10dp"
+                android:textSize="18dp"
+                android:textColor="@color/black"
+                android:layout_marginBottom="10dp"
+                android:padding="5dp"
+                android:layout_marginStart="10dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/edit_text_background"
+                android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Subtotal"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="₹798"
+                    android:gravity="right"/>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:padding="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="#E5E5E5" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="delivery charges"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="FREE"
+                    android:gravity="right"/>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:padding="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="#E5E5E5" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Payable amount"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="₹580"
+                    android:gravity="right"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:padding="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="#E5E5E5" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Savings"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="₹580"
+                    android:textColor="@color/red_800"
+                    android:gravity="right"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom">
+
+        <Button
+            android:id="@+id/Checkout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/blue_50"
+            android:text="PROCEED TO PAYMENT"
+            android:textAllCaps="true"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+</LinearLayout>

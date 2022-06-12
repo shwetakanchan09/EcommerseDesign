@@ -1,0 +1,676 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".activity.MenActivity2">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_50"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:popupTheme="@style/AppTheme.PopupOverlay">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/back_btn"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center|left"
+                        android:src="@drawable/ic_back" />
+
+                    <TextView
+                        android:id="@+id/app_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="-25dp"
+                        android:gravity="center"
+                        android:text="Men"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                </FrameLayout>
+            </androidx.appcompat.widget.Toolbar>
+        </RelativeLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:id="@+id/scrollView">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_MTopw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:onClick="onClick"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                android:visibility="visible">
+
+
+                <!--  <ImageView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:src="@drawable/ic_bottom_home"
+                      tools:ignore="ContentDescription" />
+      -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/margin_15"
+                    android:fontFamily="@font/muli_semibold"
+                    android:text="Top Wear"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_14" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_Mtshirt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="T-Shirt"
+                    android:padding="5dp"
+                    android:layout_marginStart="50dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_McShirt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Casual Shirts"
+                    android:padding="5dp"
+                    android:layout_marginStart="50dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_Fshirts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Formal Shirts"
+                    android:padding="5dp"
+                    android:layout_marginStart="50dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_MKurta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Kurtas"
+                    android:padding="5dp"
+                    android:layout_marginStart="50dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:padding="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="#E5E5E5" />
+
+
+            <LinearLayout
+                android:id="@+id/ll_Bottom_Wear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:onClick="onClick"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/margin_15"
+                    android:fontFamily="@font/muli_semibold"
+                    android:text="Bottom Wear"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_14" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_MJeans"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Jeans"
+                    android:padding="5dp"
+                    android:layout_marginStart="50dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_Trousers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Trousers"
+                    android:padding="5dp"
+                    android:layout_marginStart="50dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_Trackpants"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Trackpants"
+                    android:padding="5dp"
+                    android:layout_marginStart="50dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_MShorts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Shorts"
+                    android:padding="5dp"
+                    android:layout_marginStart="50dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:padding="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="#E5E5E5" />
+
+            <LinearLayout
+                android:id="@+id/ll_mFoot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:onClick="onClick"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/margin_15"
+                    android:fontFamily="@font/muli_semibold"
+                    android:text="Foot Wear"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_14" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_SportSheos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sport Shoes"
+                    android:padding="5dp"
+                    android:layout_marginStart="50dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_McasualShoes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Casual Shoes"
+                    android:padding="5dp"
+                    android:layout_marginStart="50dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_MFormal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Formal Shoes"
+                    android:padding="5dp"
+                    android:layout_marginStart="50dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+           <!-- <LinearLayout
+                android:id="@+id/ll_Formal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Formal Shoes"
+                    android:padding="5dp"
+                    android:layout_marginStart="50dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>-->
+            <LinearLayout
+                android:id="@+id/ll_mSandle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sandals"
+                    android:padding="5dp"
+                    android:layout_marginStart="50dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_mFlip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Flip-Flops"
+                    android:padding="5dp"
+                    android:layout_marginStart="50dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:padding="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="#E5E5E5" />
+
+            <LinearLayout
+                android:id="@+id/ll_Inner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:onClick="onClick"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                android:visibility="visible">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/margin_15"
+                    android:fontFamily="@font/muli_semibold"
+                    android:text="InnerWear"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_14" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_Brief"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Brief and Trunks"
+                    android:padding="5dp"
+                    android:layout_marginStart="50dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_Vests"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Vests"
+                    android:padding="5dp"
+                    android:layout_marginStart="50dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_Boxer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Boxer"
+                    android:padding="5dp"
+                    android:layout_marginStart="50dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_NightSuits"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Night Suits"
+                    android:padding="5dp"
+                    android:layout_marginStart="50dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:padding="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="#E5E5E5" />
+
+
+            <LinearLayout
+                android:id="@+id/ll_Grooming"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:onClick="onClick"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                android:visibility="visible">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/margin_15"
+                    android:fontFamily="@font/muli_semibold"
+                    android:text="Mens Grooming"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_14" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_Deo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Deodorants"
+                    android:padding="5dp"
+                    android:layout_marginStart="50dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_Perfumes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Perfumes"
+                    android:padding="5dp"
+                    android:layout_marginStart="50dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_PCare"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Personal Care and Grooming"
+                    android:padding="5dp"
+                    android:layout_marginStart="50dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_Fragrances"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Fragrances"
+                    android:padding="5dp"
+                    android:layout_marginStart="50dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:padding="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="#E5E5E5" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <GridView
+        android:id="@+id/grid"
+        android:gravity="center"
+        android:horizontalSpacing="0dp"
+        android:verticalSpacing="0dp"
+        android:scrollbars="none"
+        android:stretchMode="columnWidth"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:numColumns="2" />
+</LinearLayout>

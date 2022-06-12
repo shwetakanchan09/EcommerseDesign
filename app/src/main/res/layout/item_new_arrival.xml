@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/card_border2"
+    android:padding="@dimen/padding_5"
+    android:layout_margin="@dimen/margin_5"
+    app:cardElevation="@dimen/margin_6">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_homedecor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_5"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="@dimen/margin_6">
+
+        <RelativeLayout
+            android:layout_width="250dp"
+            android:layout_height="200dp">
+
+            <LinearLayout
+                android:id="@+id/ll_decor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_homedecor"
+                    android:layout_width="250dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/margin_5"
+                    android:scaleType="centerCrop"
+                    android:elevation="@dimen/margin_5"
+                    android:padding="@dimen/padding_5"
+                    android:src="@drawable/men1" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_alignBottom="@id/ll_decor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_overlay1"
+                android:padding="@dimen/padding_10">
+
+                <TextView
+                    android:id="@+id/tv_homedecor_product_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center_horizontal"
+                    android:text="Winter Collection"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/txt_size_20"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:background="@color/blue_50">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="New Arrival"
+                    android:textColor="@color/white"
+                    android:textSize="9sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>

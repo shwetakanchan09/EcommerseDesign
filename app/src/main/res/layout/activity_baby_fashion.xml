@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".activity.BabyFashionActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/custom_rectangle"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:id="@+id/btnfifty"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:background="@drawable/ic_round"
+            android:text="0-2 \nYears"
+            android:textSize="32sp" />
+
+        <Button
+            android:id="@+id/btnfourty"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_toRightOf="@id/btnfifty"
+            android:background="@drawable/ic_round"
+            android:text="2-4\nYears"
+            android:textSize="32sp" />
+
+        <Button
+            android:id="@+id/btnthirty"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_below="@id/btnfourty"
+            android:background="@drawable/ic_round"
+            android:text="4-8\nYears"
+            android:textSize="32sp" />
+
+        <Button
+            android:id="@+id/btntwenty"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_below="@id/btnfourty"
+            android:layout_toRightOf="@id/btnthirty"
+            android:background="@drawable/ic_round"
+            android:text="8-15\nYears"
+            android:textSize="32sp" />
+
+        <Button
+            android:id="@+id/btnUpto"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:background="@drawable/ic_round"
+            android:layout_below="@id/btnthirty"
+            android:textSize="32sp"
+            android:text="Upto 70% \nOff"/>
+
+        <Button
+            android:id="@+id/btnUpto1"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:background="@drawable/ic_round"
+            android:layout_below="@id/btntwenty"
+            android:layout_toRightOf="@id/btnUpto"
+            android:textSize="32sp"
+            android:text="Upto 60% \nOff"/>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

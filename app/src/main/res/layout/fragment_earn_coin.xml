@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".EarnCoinFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Earn Bonus Point"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:textAllCaps="false"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_bonus_coin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Partner Brand Point"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        android:textAllCaps="false"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <include
+        layout="@layout/item_partner_brand"/>
+        <include
+            layout="@layout/item_partner_brand"/>
+    </LinearLayout>
+</LinearLayout>

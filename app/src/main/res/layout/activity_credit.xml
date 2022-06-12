@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".activity.CreditActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_50"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:popupTheme="@style/AppTheme.PopupOverlay">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/back_btn"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center|left"
+                        android:src="@drawable/ic_back" />
+
+                    <TextView
+                        android:id="@+id/app_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="-25dp"
+                        android:gravity="center"
+                        android:text="My Credit"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                </FrameLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </RelativeLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/money1"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="You have no credit at the movment."
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:textColor="@color/black"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your Credit balance will be updated when you\n recieve a refund"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:textSize="16dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Why should I use My Credit?"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:textSize="16dp"/>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:padding="5dp"
+        android:layout_marginTop="@dimen/margin_5"
+        android:background="#E5E5E5" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/imgRefund"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/refund"/>
+
+        <TextView
+            android:id="@+id/txtRefund"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toRightOf="@id/imgRefund"
+            android:text="Get Instant refunds"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tctRefund1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtRefund"
+            android:layout_marginStart="60dp"
+            android:textSize="16dp"
+            android:text="Your refund will bw credited directly to your account" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/imgWallet"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/wallet1"/>
+
+        <TextView
+            android:id="@+id/txtCredit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toRightOf="@id/imgWallet"
+            android:text="Spend credit when you shop"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tctCredit1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:textSize="16dp"
+            android:layout_below="@id/txtCredit"
+            android:text="At checkout select Use My Credit to easily pay with your available balance."
+   />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="\n\nFor more information go to Help Centre."/>
+</LinearLayout>

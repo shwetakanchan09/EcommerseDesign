@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="15dp"
+    app:cardMaxElevation="12dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imgVoucher"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/pizza" />
+
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="left"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/domino" />
+
+        <TextView
+            android:id="@+id/tv_voucher_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_below="@id/cv_price"
+            android:text="Dominos Voucher Worth Rs. 499"
+            android:gravity="center"
+            android:textSize="@dimen/txt_size_12sp"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_overlay1"
+            android:orientation="horizontal">
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="Details"
+            android:layout_marginStart="20dp"
+            android:background="@color/orange_900"
+            android:layout_marginTop="20dp"/>
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:text="Get Using 25 Points"
+                android:textColor="@color/white"
+                android:background="#C60000"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.BasketActivity">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:popupTheme="@style/AppTheme.PopupOverlay">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/back_btn"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center|left"
+                        android:src="@drawable/ic_back_black" />
+
+                    <TextView
+                        android:id="@+id/app_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="-25dp"
+                        android:gravity="center"
+                        android:text="SHOPPING BAG"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/heart"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/like" />
+
+
+                </FrameLayout>
+            </androidx.appcompat.widget.Toolbar>
+        </RelativeLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_50"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="#F7FADB"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:text="OFFER"
+            android:textColor="#FF5252"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="20dp"
+            android:textSize="14sp"
+            android:layout_marginBottom="10dp"
+            android:text="Get extra 20% OFF on all orders above Rs.4999 and above Use Code SALE20 And Get 10% OFF on orders of Rs.2,999 and above, Use code: SALE10"
+            android:textColor="@color/black" />
+
+
+    </LinearLayout>
+
+  <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/rv_shopping_items"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:nestedScrollingEnabled="false"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:padding="5dp"
+               android:layout_marginTop="10dp"
+                android:background="#E5E5E5" />
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:layout_marginStart="10dp"
+    android:text="Quick grab suggestion for you"
+    android:textColor="@color/black"/>
+        <HorizontalScrollView
+            android:id="@+id/hsv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:fillViewport="true"
+            android:padding="10dp"
+            android:measureAllChildren="false"
+            android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+            <include
+                layout="@layout/item_quick_grab"/>
+
+            <include
+                layout="@layout/item_quick_grab"/>
+            <include
+                layout="@layout/item_quick_grab"/>
+            <include
+                layout="@layout/item_quick_grab"/>
+            <include
+                layout="@layout/item_quick_grab"/>
+        </LinearLayout>
+        </HorizontalScrollView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:text="Trending Items"
+                android:textColor="@color/black"/>
+            <HorizontalScrollView
+                android:id="@+id/hsv1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:fillViewport="true"
+                android:padding="10dp"
+                android:measureAllChildren="false"
+                android:scrollbars="none" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+                    <include
+                        layout="@layout/item_quick_grab"/>
+
+                    <include
+                        layout="@layout/item_quick_grab"/>
+                    <include
+                        layout="@layout/item_quick_grab"/>
+                    <include
+                        layout="@layout/item_quick_grab"/>
+                    <include
+                        layout="@layout/item_quick_grab"/>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textSize="@dimen/txt_size_12"
+        android:text="Got a promo code?"/>
+
+        <TextView
+            android:id="@+id/txtApply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:padding="10dp"
+            android:textSize="@dimen/txt_size_12"
+            android:textColor="@color/blue_50"
+            android:text="APPLY"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_Promo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="horizontal">
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="Enter your promo code"/>
+
+        <Button
+            android:id="@+id/btnUpdate"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Apply"
+            android:textStyle="bold"
+            android:background="@color/blue_50"
+            android:textAllCaps="true"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:padding="5dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="#E5E5E5" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textSize="@dimen/txt_size_12"
+        android:text="Have a Gift Card? Redeem it at checkout."/>
+
+   <!-- <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:padding="5dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="#E5E5E5" />-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="#E5E5E5"
+            android:orientation="vertical">
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/white_radius_background"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Payment Information"
+                    android:textColor="@color/black"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/txt_size_14"
+            android:text="Value of Products"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="₹770.00"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="@dimen/txt_size_14"
+            android:gravity="right"/>
+    </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/txt_size_14"
+                        android:text="Discount(-)"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="₹770.00"
+                        android:textColor="@color/red_800"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/txt_size_14"
+                        android:gravity="right"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/txt_size_12"
+                        android:text="Estimated GST(+)"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="₹29.65"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt_size_14"
+                        android:gravity="right"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/txt_size_14"
+                        android:text="Shipping(+)"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="FREE"
+                        android:textColor="@color/red_800"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/txt_size_14"
+                        android:gravity="right"/>
+                </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/txt_size_14"
+                        android:textColor="@color/black"
+                        android:text="Sub Total"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="₹622.54"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/txt_size_14"
+                        android:gravity="right"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/txt_size_14"
+                        android:textColor="@color/black"
+                        android:text="Final Total"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="₹622.54"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/txt_size_14"
+                        android:gravity="right"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/txt_size_14"
+                        android:text="Silver Membership Saving"/>
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginLeft="110dp"
+                        android:src="@drawable/ic_help"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="₹15.40"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt_size_14"
+                        android:gravity="right"/>
+
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <Button
+                android:id="@+id/txtAddBasket"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="5dp"
+                android:background="@color/white"
+                android:text="₹ 798"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/Checkout"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="5dp"
+                android:layout_toRightOf="@id/txtAddBasket"
+                android:background="@color/blue_50"
+                android:text="PLACE ORDER"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="@dimen/margin_5"
+    app:cardElevation="@dimen/margin_10">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_homedecor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_5"
+        android:layout_margin="@dimen/margin_5"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="@dimen/margin_6">
+
+        <RelativeLayout
+            android:layout_width="200dp"
+            android:layout_height="300dp">
+
+            <LinearLayout
+                android:id="@+id/ll_coupon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/imgCoupon"
+                    android:layout_width="200dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/margin_5"
+                    android:scaleType="centerCrop"
+                    android:background="@color/blue_100"
+                    android:elevation="@dimen/margin_10"
+                    android:src="@drawable/gift" />
+                <!--                    android:scaleType="centerCrop"-->
+
+
+                <TextView
+                    android:id="@+id/txt_coupon_des"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="description"
+                    android:textColor="@color/black"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/txt_Extra_off"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="description"
+                    android:textColor="@color/black"
+                    android:textSize="9sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/black_strok"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtUse"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Use"
+                        android:textColor="@color/black_color"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/img_Coupon_Point"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/coin2" />
+
+                    <TextView
+                        android:id="@+id/txt_Coupon_Point"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2500"
+                        android:textColor="@color/black_color"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>

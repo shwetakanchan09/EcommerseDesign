@@ -1,0 +1,116 @@
+package com.shweta.reyound.activity;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.GridView;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.Toast;
+
+import com.shweta.reyound.R;
+import com.shweta.reyound.adapter.FormalAdapter;
+import com.shweta.reyound.adapter.ShortAdapter;
+
+public class ShortActivity extends Activity {
+
+    LinearLayout ll_Relevant, ll_Filter;
+    GridView grid;
+    Intent intent;
+    ImageView backbtn;
+
+    String[] web = {
+            "Men's Short",
+            "Men's Short",
+            "Men's Short",
+            "Men's Short",
+            "Men's Short",
+            "Men's Short",
+            "Men's Short",
+            "Men's Short",
+            "Men's Short",
+            "Men's Short",
+            "Men's Short",
+            "Men's Short",
+            "Men's Short",
+            "Men's Short",
+            "Men's Short",
+            "Men's Short",
+            "Men's Short",
+            "Men's Short",
+            "Men's Short",
+            "Men's Short"
+
+    } ;
+    int[] imageId = {
+            R.drawable.short1,
+            R.drawable.short2,
+            R.drawable.short3,
+            R.drawable.short4,
+            R.drawable.short5,
+            R.drawable.short6,
+            R.drawable.short7,
+            R.drawable.short8,
+            R.drawable.short9,
+            R.drawable.short10,
+            R.drawable.short11,
+            R.drawable.short12,
+            R.drawable.short1,
+            R.drawable.short2,
+            R.drawable.short3,
+            R.drawable.short4
+    };
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_short);
+
+        ll_Relevant = findViewById(R.id.ll_Relevent);
+        ll_Filter = findViewById(R.id.ll_Filter);
+        backbtn = findViewById(R.id.back_btn);
+
+        backbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
+
+        ll_Relevant.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(getApplicationContext(), ReleventActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        ll_Filter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(getApplicationContext(), FilterActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        ShortAdapter adapter = new ShortAdapter(ShortActivity.this, web, imageId);
+        grid=(GridView)findViewById(R.id.grid);
+        grid.setAdapter(adapter);
+        grid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view,
+                                    int position, long id) {
+                Toast.makeText(ShortActivity.this, "You Clicked at " +web[+ position], Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
+    }
+}

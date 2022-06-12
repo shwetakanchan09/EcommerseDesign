@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="290dp"
+    android:background="@drawable/certificate_border">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:layout_marginStart="@dimen/margin_10"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_marginEnd="@dimen/margin_10"
+        android:layout_marginBottom="@dimen/margin_10"
+        android:background="@drawable/certificate_border"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_20"
+                android:layout_marginTop="@dimen/margin_10"
+                android:fontFamily="@font/allura"
+                android:text="Gift Certificate"
+                android:textColor="#FF3D00"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="end"
+                android:layout_marginStart="150dp"
+                android:src="@drawable/reyound" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_20"
+                android:layout_marginTop="@dimen/margin_10"
+                android:fontFamily="@font/allura"
+                android:text="To,:"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_10"
+                android:fontFamily="@font/allura"
+                android:text="Dear Shweta"
+                android:textColor="#FFAB40"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_20"
+                android:layout_marginTop="@dimen/margin_10"
+                android:fontFamily="@font/allura"
+                android:text="Message:"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_10"
+                android:fontFamily="@font/allura"
+                android:text="Many May Happy Returns Of The Day"
+                android:textColor="#FFAB40"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_20"
+                android:layout_marginTop="@dimen/margin_10"
+                android:fontFamily="@font/allura"
+                android:text="from,:"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_10"
+                android:fontFamily="@font/allura"
+                android:text="Your Brother, sister and friend"
+                android:textColor="#FFAB40"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="#E5E5E5" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_10"
+                android:text="Voucher Code: FGHLUAQERJ100"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/allura"
+                android:gravity="end"
+                android:text="Rs. 1000"
+                android:textColor="#FFAB40"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="#E5E5E5" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="10dp"
+            android:textSize="12sp"
+            android:text="Conditions Apply, Please visit www.Reyound.com for detailes information valid toll 31st March 2000" />
+    </LinearLayout>
+</RelativeLayout>

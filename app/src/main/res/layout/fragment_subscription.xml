@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="10dp"
+    android:paddingTop="5dp"
+    android:background="@color/white"
+    android:paddingEnd="20dp"
+    android:paddingBottom="20dp"
+    tools:context=".ReferFragment">
+
+    <LinearLayout
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:id="@+id/ll_referTab"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="@{handlers::onStreamsClick}"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Refer and Earn"
+                android:textColor="@color/blue_50"
+                android:textStyle="bold"
+                android:textSize="20sp" />
+
+            <View
+                android:id="@+id/refer_background"
+                android:layout_width="match_parent"
+                android:layout_height="7dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/selected_left_layout" />
+            <View
+                android:id="@+id/share_background1"
+                android:layout_width="match_parent"
+                android:layout_height="7dp"
+                android:layout_marginTop="5dp"
+                android:visibility="gone"
+                android:background="@drawable/right_layout" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_shareTab"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="@{handlers::onBookmarksClick}"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SHARE"
+                android:textColor="@color/blue_50"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:textSize="20sp" />
+
+            <View
+                android:id="@+id/share_background"
+                android:layout_width="match_parent"
+                android:layout_height="7dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/right_layout" />
+
+            <View
+                android:id="@+id/refer_background1"
+                android:layout_width="match_parent"
+                android:layout_height="7dp"
+                android:layout_marginTop="5dp"
+                android:visibility="gone"
+                android:background="@drawable/selected_left_layout" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/container_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll_top"
+        android:background="@android:color/transparent" />
+
+</RelativeLayout>
+

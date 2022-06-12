@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    tools:context=".Voucher_Code_Activity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical">
+
+           <ImageView
+               android:layout_width="35dp"
+               android:layout_height="35dp"
+               android:src="@drawable/ic_close1"
+               android:padding="5dp"/>
+
+
+           <View
+               android:layout_width="match_parent"
+               android:layout_height="1dp"
+               android:background="#c6cfd1"
+               android:layout_marginTop="10dp"/>
+
+           <ImageView
+               android:layout_width="80dp"
+               android:layout_height="80dp"
+               android:src="@drawable/zomato"
+               android:layout_marginTop="10dp"
+               android:layout_gravity="center"/>
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="10dp"
+               android:layout_gravity="center"
+               android:text="Zomato Pro"/>
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="10dp"
+               android:layout_gravity="center"
+               android:text="Zomato Pro Voucher Worth Rs. 899"
+               android:textColor="@color/black"
+               android:textSize="20sp"
+               android:textStyle="bold"/>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:layout_marginStart="30dp"
+               android:layout_marginEnd="30dp"
+               android:layout_marginTop="20dp"
+               android:background="@drawable/dotted">
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="20sp"
+                   android:text="1009846389022634"
+                   android:layout_gravity="center"
+                   android:textSize="20sp"
+                   android:textStyle="bold"
+                   android:textColor="@color/black"/>
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Tap to Copy Voucher Code"
+                   android:layout_gravity="center"
+                   android:layout_marginTop="10dp"
+                   android:layout_marginBottom="20dp"/>
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:layout_marginStart="30dp"
+               android:layout_marginEnd="30dp"
+               android:layout_marginTop="20dp"
+               android:background="@drawable/dotted">
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="20sp"
+                   android:text="174698"
+                   android:layout_gravity="center"
+                   android:textSize="20sp"
+                   android:textStyle="bold"
+                   android:textColor="@color/black"/>
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Tap to Copy Voucher Pin"
+                   android:layout_gravity="center"
+                   android:layout_marginTop="10dp"
+                   android:layout_marginBottom="20dp"/>
+           </LinearLayout>
+
+           <View
+               android:layout_width="match_parent"
+               android:layout_height="1dp"
+               android:background="#c6cfd1"
+               android:layout_marginTop="20dp"/>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="10dp"
+               android:orientation="horizontal">
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textSize="12sp"
+                   android:text="Claimed On:"/>
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Aug 27, 2021 by using"
+                   android:layout_marginStart="10dp"
+                   android:textSize="12sp"
+                   android:textColor="@color/black"/>
+
+               <ImageView
+                   android:layout_width="20dp"
+                   android:layout_height="20dp"
+                   android:src="@drawable/coin2"
+                   android:layout_marginStart="5dp"/>
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="300 + ₹600"
+                   android:textSize="12sp"
+                   android:textColor="@color/black"/>
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="20dp"
+               android:orientation="horizontal">
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textSize="12sp"
+                   android:text="Valid Till:"/>
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Feb 28, 2022"
+                   android:textSize="12sp"
+                   android:layout_marginStart="10dp"
+                   android:textColor="@color/black"/>
+
+
+           </LinearLayout>
+
+           <View
+               android:layout_width="match_parent"
+               android:layout_height="1dp"
+               android:background="#c6cfd1"
+               android:layout_marginTop="20dp"/>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_marginTop="20dp"
+    android:background="@color/blue_100">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="20sp"
+        android:text="How was your claim experience?"/>
+
+</LinearLayout>
+       </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="How to Use"
+            android:textColor="@color/black_color"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="__________________________________________\n__________________________________________\n__________________________________________\n__________________________________________\n__________________________________________\n__________________________________________\n"
+            android:textColor="@color/black_color"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Key Terms and Conditions"
+            android:textColor="@color/black_color"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="__________________________________________\n__________________________________________\n__________________________________________\n__________________________________________\n__________________________________________\n__________________________________________\n"
+            android:textColor="@color/black_color"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="About the Offer"
+            android:textColor="@color/black_color"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="__________________________________________\n__________________________________________"
+            android:textColor="@color/black_color"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Transaction Details"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Transaction ID:"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:text="FHD127653092592149BPRS5"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date:"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Aug 27, 2021"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Amount debited: "/>
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/coin2"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="300 + ₹799"/>
+
+        </LinearLayout>
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Need Help?"
+    android:layout_marginBottom="10dp"
+    android:layout_marginTop="20dp"/>
+    </LinearLayout>
+</ScrollView>

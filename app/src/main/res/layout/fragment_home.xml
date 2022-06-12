@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:scrollbars="none"
+    tools:context=".HomeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:orientation="horizontal"
+            android:background="#E5E5E5">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_location"
+                android:layout_marginStart="20dp"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="20dp"
+                android:textSize="16sp"
+                android:text="Deliver to Shweta - Thane 400605"/>
+
+        </LinearLayout>
+
+    <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <HorizontalScrollView
+            android:id="@+id/hsv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:fillViewport="true"
+            android:padding="10dp"
+            android:measureAllChildren="false"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imgMen"
+                    android:layout_marginStart="10dp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/r_ing"
+                    android:src="@drawable/homen" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imgWmen"
+                    android:layout_marginStart="10dp"
+                    android:layout_width="60dp"
+                    android:background="@drawable/maroon"
+                    android:layout_height="60dp"
+                    android:src="@drawable/wom" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imgGirl"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/r_ing"
+                    android:src="@drawable/baby" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imgBeauty"
+                    android:layout_marginStart="10dp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/maroon"
+                    android:src="@drawable/beauty" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imgAcc"
+                    android:layout_marginStart="10dp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/r_ing"
+                    android:src="@drawable/baga" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imgHom"
+                    android:layout_marginStart="10dp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/r_ing"
+                    android:src="@drawable/home" />
+
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+
+            <include
+            layout="@layout/item_blink"
+            android:id="@+id/includedLayout" />
+
+        <include
+            layout="@layout/item_todays_prize_crash_home" />
+
+        <ImageView
+            android:id="@+id/ivGif"
+            android:contentDescription="Gif"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_banner_slider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.smarteist.autoimageslider.SliderView
+                android:id="@+id/sv_banner"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                app:sliderAnimationDuration="600"
+                app:sliderAutoCycleDirection="back_and_forth"
+                app:sliderIndicatorAnimationDuration="600"
+                app:sliderIndicatorEnabled="true"
+                app:sliderIndicatorGravity="center_horizontal|bottom"
+                app:sliderIndicatorMargin="15dp"
+                app:sliderIndicatorOrientation="horizontal"
+                app:sliderIndicatorPadding="3dp"
+                app:sliderIndicatorRadius="2dp"
+                app:sliderIndicatorSelectedColor="#5A5A5A"
+                app:sliderIndicatorUnselectedColor="#fff"
+                app:sliderScrollTimeInSec="1" />
+
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_rectangle"
+                android:padding="@dimen/padding_10"
+                android:layout_marginBottom="@dimen/margin_10">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Budget Store"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"
+                    android:gravity="center"
+                    android:letterSpacing="0.2"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"/>
+
+     <androidx.recyclerview.widget.RecyclerView
+         android:id="@+id/rv_pricestorelist"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="@dimen/margin_10"/>
+ </LinearLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Best Fashion Deals Flat 60% Off"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textAllCaps="true"
+            android:gravity="center"
+            android:letterSpacing="0.2"
+            android:layout_marginTop="10dp"
+            android:textSize="16sp"/>
+
+<RelativeLayout
+    android:id="@+id/r_back"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/r_Categories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" />
+
+</RelativeLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Best Fashion Deals Flat 50% Off"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textAllCaps="true"
+            android:gravity="center"
+            android:letterSpacing="0.2"
+            android:layout_marginTop="22dp"
+            android:textSize="16sp"/>
+        <RelativeLayout
+            android:id="@+id/r_back1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/r_Categories1"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:background="#E5E5E5"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Best Fashion Deals Flat 40% Off"
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:textAllCaps="true"
+            android:gravity="center"
+            android:letterSpacing="0.2"
+            android:textColor="@color/black_color"
+            android:layout_marginTop="20dp"
+            android:textSize="16sp"/>
+        <RelativeLayout
+            android:id="@+id/r_back2"
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:visibility="gone"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/r_Categories2"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+
+  <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_rectangle"
+                android:padding="@dimen/padding_10"
+                android:layout_marginBottom="@dimen/margin_10">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Home Decoration"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textAllCaps="true"
+                    android:gravity="center"
+                    android:letterSpacing="0.2"
+                    android:textColor="@color/black"/>
+
+         <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_home_decor_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10" />
+  </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_rectangle"
+            android:padding="@dimen/padding_10"
+            android:layout_marginBottom="@dimen/margin_10">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="New Arrival"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textAllCaps="true"
+                android:gravity="center"
+                android:letterSpacing="0.2"
+                android:textColor="@color/black"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_new_arrival_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Shop by categories"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textAllCaps="true"
+            android:gravity="center"
+            android:letterSpacing="0.2"
+            android:layout_marginTop="22dp"
+            android:textSize="16sp"/>
+        <LinearLayout
+            android:id="@+id/r_back4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+
+                android:src="@drawable/women"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_Women"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/r_back5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+
+                android:src="@drawable/men"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_Men"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/r_back6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/kid"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_Kids"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/r_back7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+
+                android:src="@drawable/acc"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_Acc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/r_back8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/ho"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_home"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Refer a Friend Get Scratch Card Upto 500 Off"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:gravity="left"
+            android:layout_marginTop="20dp"
+            android:letterSpacing="0.2"
+            android:padding="5dp"
+            android:textColor="@color/black_color"
+            android:textSize="14sp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:background="@drawable/bottom_left_radius">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img1"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginStart="30dp"
+                    android:src="@drawable/jwellary"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Womens Jwellary"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="20dp"
+                    android:textStyle="bold"
+                    android:layout_below="@id/img1"
+                    android:textSize="18sp"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/bottom_right_radius">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img2"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginStart="30dp"
+                    android:src="@drawable/casual10"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mens Wear"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="50dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:layout_below="@id/img2"
+                    android:textSize="18sp"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:background="@drawable/rop_right_radius">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img3"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginStart="30dp"
+                    android:src="@drawable/fashion1"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kids Wear"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="50dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:layout_below="@id/img3"
+                    android:textSize="18sp"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/top_left_radius">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img4"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginStart="30dp"
+                    android:src="@drawable/mfoot"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="All footwear"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="50dp"
+                    android:textStyle="bold"
+                    android:layout_below="@id/img4"
+                    android:textSize="18sp"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Best Seller"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:gravity="center"
+            android:padding="5dp"
+            android:layout_marginTop="10dp"
+            android:letterSpacing="0.2"
+            android:textSize="18sp"
+            android:textColor="@color/black"/>
+
+    <HorizontalScrollView
+        android:id="@+id/hs_bestSeller"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:fillViewport="true"
+        android:padding="10dp"
+        android:measureAllChildren="false"
+        android:scrollbars="none" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <include
+            layout="@layout/item_topseller"
+            android:id="@+id/item_topseller" />
+
+        <include
+            layout="@layout/item_topseller"
+            android:id="@+id/item_topseller" />
+
+        <include
+            layout="@layout/item_topseller"
+            android:id="@+id/item_topseller" />
+
+        <include
+            layout="@layout/item_topseller"
+            android:id="@+id/item_topseller" />
+
+        <include
+            layout="@layout/item_topseller"
+            android:id="@+id/item_topseller" />
+
+        <include
+            layout="@layout/item_topseller"
+            android:id="@+id/item_topseller" />
+
+    </LinearLayout>
+    </HorizontalScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Trending"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:gravity="left"
+                android:letterSpacing="0.2"
+                android:textColor="@color/black_color"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="See all"
+                android:textStyle="bold"
+                android:visibility="gone"
+                android:textAllCaps="true"
+                android:gravity="right"
+                android:letterSpacing="0.2"
+                android:textColor="@color/black_color"
+                android:layout_marginTop="20dp"
+                android:textSize="18sp"/>
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginEnd="5dp"
+                android:src="@drawable/ic_split"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_trending"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Recent View"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:gravity="center"
+            android:letterSpacing="0.2"
+            android:textColor="@color/black_color"
+            android:layout_marginTop="20dp"
+            android:textSize="18sp"/>
+
+        <RelativeLayout
+            android:id="@+id/r_back3"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/r_Categories3"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>

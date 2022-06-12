@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".activity.WriteToUsActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_50"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:popupTheme="@style/AppTheme.PopupOverlay">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/back_btn"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center|left"
+                        android:src="@drawable/ic_back" />
+
+                    <TextView
+                        android:id="@+id/app_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="-25dp"
+                        android:gravity="center"
+                        android:text="Write to Us"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ic_shoppingbag1" />
+
+
+                </FrameLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </RelativeLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_10"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="We love to suggestio and comments."/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:padding="5dp"
+                android:layout_marginTop="@dimen/margin_5"
+                android:background="#E5E5E5" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_10"
+                android:textSize="@dimen/padding_18"
+                android:text="Your feedback is about our:\n\nOnline Experience:"/>
+
+            <EditText
+                android:id="@+id/et1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Enter Your 10-digit mobile number"
+                android:layout_marginTop="20dp"/>
+
+
+            <EditText
+                android:id="@+id/et2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Tell us what you think"
+                android:layout_marginTop="20dp"/>
+
+            <Button
+                android:id="@+id/btnbalance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/et1"
+                android:layout_marginTop="20dp"
+                android:background="@color/blue_50"
+                android:text="SUBMIT" />
+
+
+
+
+
+
+
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

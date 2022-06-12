@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_banner"
+        android:layout_width="400dp"
+        android:layout_height="250dp"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/user" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/iv_banner"
+        android:background="@drawable/bg_overlay"
+        android:padding="@dimen/padding_20">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_10"
+            android:text="text"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+</RelativeLayout>

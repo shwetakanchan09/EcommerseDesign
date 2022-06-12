@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:id="@+id/reward_for_party"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_homedecor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_5"
+        android:layout_margin="@dimen/margin_5"
+        app:cardElevation="@dimen/margin_6">
+
+        <RelativeLayout
+            android:layout_width="180dp"
+            android:layout_height="300dp">
+
+            <LinearLayout
+                android:id="@+id/ll_coupon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/imgCoupon"
+                    android:layout_width="180dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/margin_5"
+                    android:background="@color/blue_100"
+                    android:elevation="@dimen/margin_10"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/zomato" />
+                <!--                    android:scaleType="centerCrop"-->
+
+
+                <TextView
+                    android:id="@+id/txt_coupon_des"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Zomato"
+                    android:textColor="@color/black"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/txt_Extra_off"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="3 Months Subscription of Pro"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/black_strok"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtUse"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Use"
+                        android:textColor="@color/black_color"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/img_Coupon_Point"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/coin2" />
+
+                    <TextView
+                        android:id="@+id/txt_Coupon_Point"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="100"
+                        android:textColor="@color/black_color"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_coupon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_5"
+        android:layout_margin="@dimen/margin_5"
+        android:layout_toRightOf="@id/cv_homedecor"
+        app:cardElevation="@dimen/margin_6">
+
+        <RelativeLayout
+            android:layout_width="180dp"
+            android:layout_height="300dp">
+
+            <LinearLayout
+                android:id="@+id/ll_coupon1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/imgCoupon1"
+                    android:layout_width="180dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/margin_5"
+                    android:background="@color/blue_100"
+                    android:elevation="@dimen/margin_10"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/domino" />
+                <!--                    android:scaleType="centerCrop"-->
+
+
+                <TextView
+                    android:id="@+id/txt_coupon_des1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Zomato"
+                    android:textColor="@color/black"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/txt_Extra_off1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="3 Months Subscription of Pro"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/black_strok"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtUse1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Use"
+                        android:textColor="@color/black_color"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/img_Coupon_Point1"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/coin2" />
+
+                    <TextView
+                        android:id="@+id/txt_Coupon_Point1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="100"
+                        android:textColor="@color/black_color"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_coupon2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_5"
+        android:layout_margin="@dimen/margin_5"
+        android:layout_below="@id/cv_homedecor"
+        app:cardElevation="@dimen/margin_6">
+
+        <RelativeLayout
+            android:layout_width="180dp"
+            android:layout_height="300dp">
+
+            <LinearLayout
+                android:id="@+id/ll_coupon2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/imgCoupon2"
+                    android:layout_width="180dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/margin_5"
+                    android:background="@color/blue_100"
+                    android:elevation="@dimen/margin_10"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/icecream" />
+                <!--                    android:scaleType="centerCrop"-->
+
+
+                <TextView
+                    android:id="@+id/txt_coupon_des2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Zomato"
+                    android:textColor="@color/black"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/txt_Extra_off2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="3 Months Subscription of Pro"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/black_strok"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtUse2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Use"
+                        android:textColor="@color/black_color"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/img_Coupon_Point2"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/coin2" />
+
+                    <TextView
+                        android:id="@+id/txt_Coupon_Point2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="100"
+                        android:textColor="@color/black_color"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_coupon4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_5"
+        android:layout_margin="@dimen/margin_5"
+        android:layout_below="@id/cv_homedecor"
+        android:layout_toRightOf="@id/cv_coupon2"
+        app:cardElevation="@dimen/margin_6">
+
+        <RelativeLayout
+            android:layout_width="180dp"
+            android:layout_height="300dp">
+
+            <LinearLayout
+                android:id="@+id/ll_coupon4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/imgCoupon4"
+                    android:layout_width="180dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/margin_5"
+                    android:background="@color/blue_100"
+                    android:elevation="@dimen/margin_10"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/mac" />
+
+
+                <TextView
+                    android:id="@+id/txt_coupon_des4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Zomato"
+                    android:textColor="@color/black"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/txt_Extra_off4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="3 Months Subscription of Pro"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/black_strok"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtUse4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Use"
+                        android:textColor="@color/black_color"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/img_Coupon_Point4"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/coin2" />
+
+                    <TextView
+                        android:id="@+id/txt_Coupon_Point4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="100"
+                        android:textColor="@color/black_color"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

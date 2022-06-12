@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.shweta.reyound">
+
+    <application
+        android:name=".utils.BaseApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Reyound"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:icon">
+        <activity
+            android:name=".activity.GiftCertificateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.Product_List_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Voucher_Code_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.Offer_Detail_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ViewHistoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.CreditRewardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.MyVouchers"
+            android:exported="false" />
+        <activity
+            android:name=".activity.CoinBalanceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ZoomInActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.LevelActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.RewardPrizeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.CashBackActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ShareActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.EarnActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.SubcriptionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.BabyFashionActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.FragranceActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.HaireCareActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.SkinCareActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.MakeupActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.FilterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ReleventActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.Paymemt1Activity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.OrderPlacedActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ShortActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.TrackActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.TrousersActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.JeansActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.KurtaActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.FormalActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.CasualActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.PaymentActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.ProceedPayment"
+            android:exported="true" />
+        <activity
+            android:name=".activity.BasketActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.OverviewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.RatingProductActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.AddBasketActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.MenActivity2"
+            android:exported="true" />
+        <activity
+            android:name=".activity.WomenActivity2"
+            android:exported="true" />
+        <activity
+            android:name=".activity.AccesoriesActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.KidsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.MenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.WomenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.NotificationActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.SettingActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.ReturnProcessActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.ShippingActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.TermsAndConditionActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.PrivacyActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.CareerActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.WriteToUsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.GiftCardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ContactUsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.AboutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.HelpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.MoreActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.RewardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ReviewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.CommunicationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.CreditActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.OrderHistoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.AddCardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.PaymentsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.AddAddressActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.AddressBookActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.Profile"
+            android:exported="true" />
+        <activity
+            android:name=".activity.SplashScreenActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

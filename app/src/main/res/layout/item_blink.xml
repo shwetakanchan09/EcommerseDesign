@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/blink_card_border"
+    android:padding="@dimen/padding_10"
+    android:layout_margin="@dimen/margin_5"
+    app:cardElevation="@dimen/margin_6">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_homedecor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_5"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="@dimen/margin_6">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="400dp">
+
+            <LinearLayout
+                android:id="@+id/ll_decor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_homedecor"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/margin_5"
+                    android:elevation="@dimen/margin_5"
+                    android:padding="@dimen/padding_5"
+                    android:src="@drawable/men4" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignBottom="@id/ll_decor"
+                android:background="@drawable/bg_overlay"
+                android:orientation="vertical"
+                android:gravity="bottom"
+                android:padding="@dimen/padding_10">
+
+                <TextView
+                    android:id="@+id/tv_homedecor_product_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center_horizontal"
+                    android:text="Month\n End"
+                    android:textColor="#FFFFFF"
+                    android:textSize="22dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/blinktext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="center"
+                    android:text="SALE"
+                    android:textColor="#FF6600"
+                    android:textSize="32dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="center"
+                    android:text="2 DAYS LEFT!"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/zoomIntext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="center"
+                    android:text="50-80% OFF"
+                    android:textColor="#FF6600"
+                    android:textSize="16dp"
+                    android:visibility="gone"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/zoomOutext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="center"
+                    android:text="50-80% OFF"
+                    android:textColor="#FF6600"
+                    android:textSize="32dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
+</FrameLayout>

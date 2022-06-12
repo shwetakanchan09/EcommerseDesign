@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp">
+
+        <ImageView
+            android:id="@+id/imgcod"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/cod" />
+
+        <TextView
+            android:id="@+id/txt_pay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgcod"
+            android:text="Pay on \nDelivery"
+            android:textColor="@color/black"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/imgwarantee"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/imgcod"
+            android:src="@drawable/warantee" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_warantee"
+                android:layout_toRightOf="@id/txt_pay"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/imgwarantee"
+                android:text="30 Days\nReturn and\n Exchange"
+                android:textSize="12sp"
+                android:textColor="@color/black"/>
+
+
+            <ImageView
+                android:id="@+id/imgreyo"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/deliv"
+                android:layout_toRightOf="@id/imgwarantee"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/txt_warantee"
+                android:id="@+id/txt_reyo"
+                android:layout_below="@id/imgreyo"
+                android:text="Reyound\n Delivered"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:textSize="12sp"
+                android:textColor="@color/black"/>
+
+
+            <ImageView
+                android:id="@+id/imgcontactless"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/cont"
+                android:layout_toRightOf="@id/imgreyo"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_contactless"
+                android:layout_below="@id/imgreyo"
+                android:layout_toRightOf="@id/txt_reyo"
+                android:text="No-contact\nDelivery"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:textSize="12sp"
+                android:textColor="@color/black"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

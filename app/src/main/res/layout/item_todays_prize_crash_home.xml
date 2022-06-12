@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_heading"
+        android:layout_width="300dp"
+       android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/heading_home"
+        android:layout_height="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Todays Price Crash"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_shoes"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:layout_below="@id/rl_heading"
+        android:background="@drawable/black_strok"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="@dimen/margin_10"
+        android:layout_marginEnd="@dimen/margin_5"
+        android:layout_marginBottom="@dimen/margin_10">
+
+        <ImageView
+            android:id="@+id/shoes"
+            android:layout_width="170dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="@dimen/margin_10"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:scaleType="centerCrop"
+            android:src="@drawable/wfoot" />
+        <TextView
+            android:id="@+id/txt_des"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="FootWear\nGrab fast limited time"
+            android:layout_below="@id/shoes"/>
+
+        <TextView
+            android:id="@+id/txt_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Under 399"
+            android:textColor="@color/black"
+            android:layout_below="@id/txt_des"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_kitchen"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:background="@drawable/black_strok"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/rl_heading"
+        android:layout_toRightOf="@id/rl_shoes"
+        android:layout_marginStart="@dimen/margin_5"
+        android:layout_marginEnd="@dimen/margin_5"
+        android:layout_marginBottom="@dimen/margin_10">
+
+        <ImageView
+            android:id="@+id/img_home"
+            android:layout_width="170dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="@dimen/margin_10"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ho" />
+
+        <TextView
+            android:id="@+id/txt_desk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_home"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Kitchen Product\nGrab fast limited time" />
+
+        <TextView
+            android:id="@+id/txt_price1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Under 149"
+            android:textColor="@color/black"
+            android:layout_below="@id/txt_desk"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rl_wshoes"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:background="@drawable/black_strok"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/rl_kitchen"
+        android:layout_toRightOf="@id/home_grab"
+        android:layout_marginStart="@dimen/margin_10"
+        android:layout_marginEnd="@dimen/margin_5"
+        android:layout_marginBottom="@dimen/margin_10">
+
+        <ImageView
+            android:id="@+id/wshoes"
+            android:layout_width="170dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="@dimen/margin_10"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:scaleType="centerCrop"
+            android:src="@drawable/diapering" />
+
+        <TextView
+            android:id="@+id/txt_des_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/wshoes"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Baby Innerwear\nGrab fast limited time" />
+
+        <TextView
+            android:id="@+id/txt_pricee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Under 149"
+            android:textColor="@color/black"
+            android:layout_below="@id/txt_des_price"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/home_grab"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:background="@drawable/black_strok"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/rl_shoes"
+        android:layout_marginStart="@dimen/margin_5"
+        android:layout_marginEnd="@dimen/margin_5"
+        android:layout_marginBottom="@dimen/margin_10">
+
+        <ImageView
+            android:id="@+id/img_home2"
+            android:layout_width="170dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="@dimen/margin_10"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:scaleType="centerCrop"
+            android:src="@drawable/home4" />
+
+        <TextView
+            android:id="@+id/txt_desk1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_home2"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Wood Furniture\nGrab fast limited time" />
+
+        <TextView
+            android:id="@+id/txt_price2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Under 2000"
+            android:textColor="@color/black"
+            android:layout_below="@id/txt_desk1"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,716 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".activity.WomenActivity2">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_50"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:popupTheme="@style/AppTheme.PopupOverlay">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/back_btn"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center|left"
+                        android:src="@drawable/ic_back" />
+
+                    <TextView
+                        android:id="@+id/app_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="-25dp"
+                        android:gravity="center"
+                        android:text="Women"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                </FrameLayout>
+            </androidx.appcompat.widget.Toolbar>
+        </RelativeLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:id="@+id/scrollView">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_Wethnic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:onClick="onClick"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                android:visibility="visible">
+
+
+                <!--  <ImageView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:src="@drawable/ic_bottom_home"
+                      tools:ignore="ContentDescription" />
+      -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/margin_15"
+                    android:fontFamily="@font/muli_semibold"
+                    android:text="Ethnic Wear"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_14" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_Saree"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Saree"
+                    android:padding="5dp"
+                    android:layout_marginStart="50dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_KurtaKurtis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Kurta and Kurtis"
+                    android:padding="5dp"
+                    android:layout_marginStart="50dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_Salwar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Kurta Set and Salwar Suits"
+                    android:padding="5dp"
+                    android:layout_marginStart="50dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_Leggings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Leggings"
+                    android:padding="5dp"
+                    android:layout_marginStart="50dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_Plazzo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Plazzo"
+                    android:padding="5dp"
+                    android:layout_marginStart="50dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:padding="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="#E5E5E5" />
+
+
+            <LinearLayout
+                android:id="@+id/ll_Western_Wear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:onClick="onClick"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/margin_15"
+                    android:fontFamily="@font/muli_semibold"
+                    android:text="Western Wear"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_14" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_Dresses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Dresses"
+                    android:padding="5dp"
+                    android:layout_marginStart="50dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_Top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Top"
+                    android:padding="5dp"
+                    android:layout_marginStart="50dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_Jumpsuits"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Jumpsuits"
+                    android:padding="5dp"
+                    android:layout_marginStart="50dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_Jeans1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Jeans"
+                    android:padding="5dp"
+                    android:layout_marginStart="50dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_wShort"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Shorts"
+                    android:padding="5dp"
+                    android:layout_marginStart="50dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:padding="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="#E5E5E5" />
+
+            <LinearLayout
+                android:id="@+id/ll_wFoot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:onClick="onClick"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/margin_15"
+                    android:fontFamily="@font/muli_semibold"
+                    android:text="Foot Wear"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_14" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_Flat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Flat"
+                    android:padding="5dp"
+                    android:layout_marginStart="50dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_wHeal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Heel"
+                    android:padding="5dp"
+                    android:layout_marginStart="50dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_Casual"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Casual Shoes"
+                    android:padding="5dp"
+                    android:layout_marginStart="50dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_Sorts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sport Shoes"
+                    android:padding="5dp"
+                    android:layout_marginStart="50dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_Formal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Formal Shoes"
+                    android:padding="5dp"
+                    android:layout_marginStart="50dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_wSandle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sandle"
+                    android:padding="5dp"
+                    android:layout_marginStart="50dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:padding="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="#E5E5E5" />
+
+            <LinearLayout
+                android:id="@+id/ll_Lingerie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:onClick="onClick"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                android:visibility="visible">
+
+
+                   <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/margin_15"
+                    android:fontFamily="@font/muli_semibold"
+                    android:text="Lingerie and Sleepwear"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_14" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_Bras"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Bras"
+                    android:padding="5dp"
+                    android:layout_marginStart="50dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_Pantees"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pantees"
+                    android:padding="5dp"
+                    android:layout_marginStart="50dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_Night"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Night Dresses"
+                    android:padding="5dp"
+                    android:layout_marginStart="50dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_Camisoles"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Camisoles and Thermals"
+                    android:padding="5dp"
+                    android:layout_marginStart="50dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:padding="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="#E5E5E5" />
+
+
+            <LinearLayout
+                android:id="@+id/ll_Beauty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:onClick="onClick"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                android:visibility="visible">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/margin_15"
+                    android:fontFamily="@font/muli_semibold"
+                    android:text="Beauty Care"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_size_14" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_Makeup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Makeup"
+                    android:padding="5dp"
+                    android:layout_marginStart="50dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_SkinCare"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Skin Care"
+                    android:padding="5dp"
+                    android:layout_marginStart="50dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_HairCare"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Hair Care"
+                    android:padding="5dp"
+                    android:layout_marginStart="50dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_Fragrances"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Fragrances"
+                    android:padding="5dp"
+                    android:layout_marginStart="50dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:padding="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="#E5E5E5" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <GridView
+        android:id="@+id/grid"
+        android:gravity="center"
+        android:horizontalSpacing="0dp"
+        android:verticalSpacing="0dp"
+        android:scrollbars="none"
+        android:stretchMode="columnWidth"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:numColumns="2" />
+</LinearLayout>
